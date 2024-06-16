@@ -16,7 +16,7 @@ class GreatPlaces with ChangeNotifier {
             id: item['id'],
             title: item['title'],
             image: File(item['image']),
-            location: PlaceLocation(latitude: 0, longitude: 0),
+            location: const PlaceLocation(latitude: 0, longitude: 0),
           ),
         )
         .toList();
@@ -39,7 +39,7 @@ class GreatPlaces with ChangeNotifier {
     final newPlace = Place(
       id: Random().nextDouble().toString(),
       title: title,
-      location: PlaceLocation(latitude: 0, longitude: 0),
+      location: const PlaceLocation(latitude: 0, longitude: 0),
       image: image,
     );
 
