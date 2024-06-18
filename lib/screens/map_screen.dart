@@ -55,7 +55,9 @@ class _MapScreenState extends State<MapScreen> {
         markers: {
           Marker(
             markerId: const MarkerId('p1'),
-            position: _pickedPosition,
+            position: _pickedPosition == const LatLng(0, 0)
+                ? widget.initialLocation.toLatLng()
+                : _pickedPosition,
           ),
         },
       ),
